@@ -6,7 +6,6 @@ import { GenerateJokeAI, streamUIAction } from "./action";
 import { readStreamableValue, useUIState } from "ai/rsc";
 
 export default function Page() {
-  const [generation, setGeneration] = useState();
   const [isGenerating, setIsGenerating] = useState(false);
   const [result, setResult] = useUIState<typeof GenerateJokeAI>();
 
@@ -29,7 +28,6 @@ export default function Page() {
       >
         Trigger Action
       </Button>
-      <pre>{JSON.stringify(generation, null, 2)}</pre>
       {result.jokeComponent}
     </div>
   );
