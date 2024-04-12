@@ -1,10 +1,19 @@
-import Link from "next/link";
+import { Link } from "@/components/link";
 
 export default function Page() {
   return (
-    <main className="px-8">
-      <h1 className="text-xl font-semibold">AI SDK Core</h1>
-      <ul>
+    <main className="space-y-4">
+      <h1 className="text-xl font-semibold">AI SDK Core Fundamentals</h1>
+      <p>
+        The following examples aim to showcase the fundamentals behind the new
+        Vercel AI SDK Core. The examples are very simple, with minimal loading
+        states to remain as simple as possible.{" "}
+      </p>
+      <p>
+        The prompt for the first 4 examples (stream/generate text/object) is
+        `Tell me a joke`.
+      </p>
+      <ul className="list-disc list-inside">
         <li>
           <Link href="/examples/generate-text">Generate Text</Link>
         </li>
