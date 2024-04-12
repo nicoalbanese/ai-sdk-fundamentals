@@ -1,5 +1,7 @@
-Gotchas
+This project showcases the fundamentals of AI SDK Core.
 
-- action must be in `.tsx` file if doing generative ui
-- watch out for default value being a new streamble value
-- watch out for declaring zod schema in same file as action
+Tu run on your local machine:
+
+- create a `.env` and add `OPENAI_API_KEY=sk-your-key`
+- run `pnpm install`
+- run `pnpm run dev`
