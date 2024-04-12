@@ -11,7 +11,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
 
   return (
-    <div>
+    <div className="space-y-4">
       <h1 className="text-xl font-semibold">Tools Example</h1>
       <p className="mb-8">
         Ask for the temperature in San Francisco. Then ask for it to be

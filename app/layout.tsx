@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { GenerateJokeAI } from "./examples/generate-ui/action";
-import Link from "next/link";
+import { BackButton } from "@/components/back-button";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,12 +19,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <GenerateJokeAI>
-          <div className="px-8">
-            <Link href="/">Back</Link>
-          </div>
-          <div>{children}</div>
-        </GenerateJokeAI>
+        <div className="max-w-2xl p-8">
+          <GenerateJokeAI>
+            <div className="mb-4">
+              <BackButton />
+            </div>
+            <div>{children}</div>
+          </GenerateJokeAI>
+        </div>
       </body>
     </html>
   );

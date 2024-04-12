@@ -7,7 +7,7 @@ import { useState } from "react";
 export default function Page() {
   const [generation, setGeneration] = useState("");
   return (
-    <div>
+    <div className="space-y-4">
       <h1 className="text-xl font-semibold">Generate Text Example</h1>
       <Button
         onClick={async () => {

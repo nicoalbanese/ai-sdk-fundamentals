@@ -8,7 +8,7 @@ import { readStreamableValue } from "ai/rsc";
 export default function Page() {
   const [generation, setGeneration] = useState<Joke>();
   return (
-    <div>
+    <div className="space-y-4">
       <h1 className="text-xl font-semibold">Stream Object Example</h1>
       <Button
         onClick={async () => {

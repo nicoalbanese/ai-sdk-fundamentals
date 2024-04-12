@@ -10,7 +10,7 @@ export default function Page() {
   const [result, setResult] = useUIState<typeof GenerateJokeAI>();
 
   return (
-    <div>
+    <div className="space-y-4">
       <h1 className="text-xl font-semibold">Generate UI</h1>
       <Button
         onClick={async () => {

@@ -10,7 +10,7 @@ export default function Page() {
     punchline: string;
   }>();
   return (
-    <div>
+    <div className="space-y-4">
       <h1 className="text-xl font-semibold">Generate Object Example</h1>
       <Button
         onClick={async () => {
