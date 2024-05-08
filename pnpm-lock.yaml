@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@ai-sdk/openai':
         specifier: ^0.0.4
-        version: 0.0.4(zod@3.23.7)
+        version: 0.0.4(zod@3.23.8)
       '@radix-ui/react-label':
         specifier: ^2.0.2
         version: 2.0.2(@types/react-dom@18.3.0)(@types/react@18.3.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -18,8 +18,8 @@ importers:
         specifier: ^1.0.2
         version: 1.0.2(@types/react@18.3.1)(react@18.3.1)
       ai:
-        specifier: ^3.1.2
-        version: 3.1.2(react@18.3.1)(solid-js@1.8.16)(svelte@4.2.12)(vue@3.4.21(typescript@5.4.5))(zod@3.23.7)
+        specifier: ^3.1.3
+        version: 3.1.3(react@18.3.1)(solid-js@1.8.16)(svelte@4.2.12)(vue@3.4.21(typescript@5.4.5))(zod@3.23.8)
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
@@ -29,6 +29,9 @@ importers:
       lucide-react:
         specifier: ^0.366.0
         version: 0.366.0(react@18.3.1)
+      nanoid:
+        specifier: ^5.0.7
+        version: 5.0.7
       next:
         specifier: ~14.2.3
         version: 14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -48,8 +51,8 @@ importers:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.3)
       zod:
-        specifier: ^3.23.7
-        version: 3.23.7
+        specifier: ^3.23.8
+        version: 3.23.8
     devDependencies:
       '@types/node':
         specifier: ^20.12.11
@@ -99,8 +102,8 @@ packages:
       zod:
         optional: true
 
-  '@ai-sdk/provider-utils@0.0.5':
-    resolution: {integrity: sha512-VVy9eQS+vS2j6cqTEQ9htMHz2nW/HFAkDXLvNFPoi1pZkviknJZEzb+DZUna6Od+jBf/TVA0HZwYnyGDaeI9cQ==}
+  '@ai-sdk/provider-utils@0.0.6':
+    resolution: {integrity: sha512-SxOZgSxnaVlW04/SjfMoAD45kWOWTWx0QcZrHaQnePooLhyk5AqQpgauPijL803uoJPCKfzd0UBv1gSKvWiU0A==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.0.0
@@ -419,8 +422,8 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
-  ai@3.1.2:
-    resolution: {integrity: sha512-96H6JiYhNzRlNSaPOM70wj7VGdGJ0Yc47G8xFMC32g1b+4MKHfi8SmpZAaixLWkO3HrdLAR1gBn6P3vVeCcKIg==}
+  ai@3.1.3:
+    resolution: {integrity: sha512-65ngr71PaLFzCa+rj/B9u2y3qlJsrUpc0i4WAcsd05/rxeY7RV8soLScCHeqB9v1yVdLBak8K6ftkGHXubtmag==}
     engines: {node: '>=18'}
     peerDependencies:
       react: ^18.2.0
@@ -708,8 +711,8 @@ packages:
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
 
-  electron-to-chromium@1.4.758:
-    resolution: {integrity: sha512-/o9x6TCdrYZBMdGeTifAP3wlF/gVT+TtWJe3BSmtNh92Mw81U9hrYwW9OAGUh+sEOX/yz5e34sksqRruZbjYrw==}
+  electron-to-chromium@1.4.759:
+    resolution: {integrity: sha512-qZJc+zsuI+/5UjOSFnpkJBwwLMH1AZgyKqJ7LUNnRsB7v/cDjMu9DvXgp9kH6PTTZxjnPXGp2Uhurw+2Ll4Hjg==}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -1298,6 +1301,11 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
+  nanoid@5.0.7:
+    resolution: {integrity: sha512-oLxFY2gd2IqnjcYyOXD8XGCftpGtZP2AbHbOkthDkvRywH5ayNtPVy9YlOPcHckXzbLTCHpkb7FB+yuxKV13pQ==}
+    engines: {node: ^18 || >=20}
+    hasBin: true
+
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
@@ -1880,35 +1888,35 @@ packages:
     peerDependencies:
       zod: ^3.22.4
 
-  zod@3.23.7:
-    resolution: {integrity: sha512-NBeIoqbtOiUMomACV/y+V3Qfs9+Okr18vR5c/5pHClPpufWOrsx8TENboDPe265lFdfewX2yBtNTLPvnmCxwog==}
+  zod@3.23.8:
+    resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
 
 snapshots:
 
-  '@ai-sdk/openai@0.0.4(zod@3.23.7)':
+  '@ai-sdk/openai@0.0.4(zod@3.23.8)':
     dependencies:
       '@ai-sdk/provider': 0.0.0
-      '@ai-sdk/provider-utils': 0.0.1(zod@3.23.7)
+      '@ai-sdk/provider-utils': 0.0.1(zod@3.23.8)
     optionalDependencies:
-      zod: 3.23.7
+      zod: 3.23.8
 
-  '@ai-sdk/provider-utils@0.0.1(zod@3.23.7)':
+  '@ai-sdk/provider-utils@0.0.1(zod@3.23.8)':
     dependencies:
       '@ai-sdk/provider': 0.0.0
       eventsource-parser: 1.1.2
       nanoid: 3.3.6
       secure-json-parse: 2.7.0
     optionalDependencies:
-      zod: 3.23.7
+      zod: 3.23.8
 
-  '@ai-sdk/provider-utils@0.0.5(zod@3.23.7)':
+  '@ai-sdk/provider-utils@0.0.6(zod@3.23.8)':
     dependencies:
       '@ai-sdk/provider': 0.0.3
       eventsource-parser: 1.1.2
       nanoid: 3.3.6
       secure-json-parse: 2.7.0
     optionalDependencies:
-      zod: 3.23.7
+      zod: 3.23.8
 
   '@ai-sdk/provider@0.0.0':
     dependencies:
@@ -2218,10 +2226,10 @@ snapshots:
 
   acorn@8.11.3: {}
 
-  ai@3.1.2(react@18.3.1)(solid-js@1.8.16)(svelte@4.2.12)(vue@3.4.21(typescript@5.4.5))(zod@3.23.7):
+  ai@3.1.3(react@18.3.1)(solid-js@1.8.16)(svelte@4.2.12)(vue@3.4.21(typescript@5.4.5))(zod@3.23.8):
     dependencies:
       '@ai-sdk/provider': 0.0.3
-      '@ai-sdk/provider-utils': 0.0.5(zod@3.23.7)
+      '@ai-sdk/provider-utils': 0.0.6(zod@3.23.8)
       eventsource-parser: 1.1.2
       json-schema: 0.4.0
       jsondiffpatch: 0.6.0
@@ -2232,13 +2240,13 @@ snapshots:
       swr: 2.2.0(react@18.3.1)
       swr-store: 0.10.6
       swrv: 1.0.4(vue@3.4.21(typescript@5.4.5))
-      zod-to-json-schema: 3.22.5(zod@3.23.7)
+      zod-to-json-schema: 3.22.5(zod@3.23.8)
     optionalDependencies:
       react: 18.3.1
       solid-js: 1.8.16
       svelte: 4.2.12
       vue: 3.4.21(typescript@5.4.5)
-      zod: 3.23.7
+      zod: 3.23.8
 
   ajv@6.12.6:
     dependencies:
@@ -2392,7 +2400,7 @@ snapshots:
   browserslist@4.23.0:
     dependencies:
       caniuse-lite: 1.0.30001616
-      electron-to-chromium: 1.4.758
+      electron-to-chromium: 1.4.759
       node-releases: 2.0.14
       update-browserslist-db: 1.0.15(browserslist@4.23.0)
 
@@ -2540,7 +2548,7 @@ snapshots:
 
   eastasianwidth@0.2.0: {}
 
-  electron-to-chromium@1.4.758: {}
+  electron-to-chromium@1.4.759: {}
 
   emoji-regex@8.0.0: {}
 
@@ -3272,6 +3280,8 @@ snapshots:
 
   nanoid@3.3.7: {}
 
+  nanoid@5.0.7: {}
+
   natural-compare@1.4.0: {}
 
   next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
@@ -3927,8 +3937,8 @@ snapshots:
 
   yocto-queue@0.1.0: {}
 
-  zod-to-json-schema@3.22.5(zod@3.23.7):
+  zod-to-json-schema@3.22.5(zod@3.23.8):
     dependencies:
-      zod: 3.23.7
+      zod: 3.23.8
 
-  zod@3.23.7: {}
+  zod@3.23.8: {}
