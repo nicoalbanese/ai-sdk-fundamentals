@@ -17,7 +17,7 @@ export default function Page() {
           const result = await generateTextAction(location);
           if (result) {
             for await (const delta of readStreamableValue(result)) {
-              setGeneration(JSON.stringify(delta, null, 2));
+              setGeneration(delta ?? "");
             }
           }
         }}
