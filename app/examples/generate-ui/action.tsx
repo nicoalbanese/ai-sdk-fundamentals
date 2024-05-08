@@ -16,8 +16,8 @@ export async function streamUIAction() {
 
   const uiStream = createStreamableUI(
     <div className="animate-pulse bg-neutral-100 max-w-prose p-4 m-4 rounded-lg">
-      loading...
-    </div>,
+      thinking...
+    </div>
   );
   const isGenerating = createStreamableValue(true);
 

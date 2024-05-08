@@ -14,10 +14,10 @@ export default function Page() {
         onClick={async () => {
           const result = await streamTextAction();
           for await (const delta of readStreamableValue(result))
-            setGeneration((p) => `${p}${delta}`);
+            setGeneration(delta ?? "");
         }}
       >
-        Trigger Action
+        Tell me a joke
       </Button>
       <pre>{JSON.stringify(generation, null, 2)}</pre>
     </div>

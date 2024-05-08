@@ -15,7 +15,7 @@ export default function Page() {
           setGeneration(result);
         }}
       >
-        Trigger Action
+      Tell me a joke
       </Button>
       <pre>{JSON.stringify(generation, null, 2)}</pre>
     </div>

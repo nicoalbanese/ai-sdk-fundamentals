@@ -10,8 +10,7 @@ export const generateTextAction = async (location: string) => {
   const { toolResults, toolCalls } = await generateText({
     model: openai("gpt-3.5-turbo"),
     temperature: 0.8,
-    prompt: `You are a funny chatbot. Find the temperature for the following location and factor it into your joke.
-location: ${location}`,
+    prompt: `You are a funny chatbot. users location: ${location}`,
     tools: {
       weather: {
         description: "Get the weather for the user's location",

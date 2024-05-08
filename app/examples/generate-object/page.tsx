@@ -18,7 +18,7 @@ export default function Page() {
           setGeneration(joke);
         }}
       >
-        Action
+      Tell me a joke
       </Button>
       <pre>{JSON.stringify(generation, null, 2)}</pre>
     </div>

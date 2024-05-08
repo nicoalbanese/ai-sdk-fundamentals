@@ -13,7 +13,6 @@ export const generateObjectAction = async () => {
       joke: z.object({
         setup: z.string().describe("the setup for the joke"),
         punchline: z.string().describe("the punchline for the joke"),
-        alternativePunchline: z.string().describe("an alternative punchline for the joke"),
       }),
     }),
   });

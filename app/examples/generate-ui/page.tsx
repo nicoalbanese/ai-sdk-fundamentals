@@ -26,7 +26,7 @@ export default function Page() {
           }
         }}
       >
-        Trigger Action
+      Tell me a joke
       </Button>
       {isGenerating ? <div>loading...</div> : result.jokeComponent}
     </div>
