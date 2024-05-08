@@ -1,6 +1,6 @@
 "use server";
 
-import { experimental_streamObject as streamObject } from "ai";
+import { streamObject } from "ai";
 import { openai } from "@ai-sdk/openai";
 import {
   StreamableValue,
@@ -23,7 +23,7 @@ export async function streamUIAction() {
 
   (async () => {
     const { partialObjectStream } = await streamObject({
-      model: openai.chat("gpt-3.5-turbo"),
+      model: openai("gpt-3.5-turbo"),
       temperature: 0.7,
       prompt: "Tell me a joke. Be creative. Make it next.js themed.",
       schema: jokeSchema,

@@ -1,6 +1,6 @@
 "use server";
 
-import { experimental_streamText as streamText } from "ai";
+import { streamText } from "ai";
 import { openai } from "@ai-sdk/openai";
 import { createStreamableValue } from "ai/rsc";
 
@@ -9,7 +9,7 @@ export const streamTextAction = async () => {
 
   (async () => {
     const { textStream } = await streamText({
-      model: openai.chat("gpt-3.5-turbo"),
+      model: openai("gpt-3.5-turbo"),
       temperature: 0.5,
       prompt: "Tell me a joke.",
     });

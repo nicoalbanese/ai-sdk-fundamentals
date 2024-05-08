@@ -1,6 +1,6 @@
 "use server";
 
-import { DeepPartial, experimental_streamObject as streamObject } from "ai";
+import { DeepPartial, streamObject } from "ai";
 import { openai } from "@ai-sdk/openai";
 import { createStreamableValue } from "ai/rsc";
 import { z } from "zod";
@@ -17,7 +17,7 @@ export const streamObjectAction = async () => {
 
   (async () => {
     const result = await streamObject({
-      model: openai.chat("gpt-3.5-turbo"),
+      model: openai("gpt-3.5-turbo"),
       temperature: 0.5,
       prompt: "Tell me a joke.",
       schema: jokeSchema,
