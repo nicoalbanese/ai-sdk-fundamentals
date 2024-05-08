@@ -1,7 +1,7 @@
 "use server";
 
 import { DeepPartial, experimental_streamObject as streamObject } from "ai";
-import { openai } from "ai/openai";
+import { openai } from "@ai-sdk/openai";
 import { createStreamableValue } from "ai/rsc";
 import { z } from "zod";
 
@@ -12,18 +12,18 @@ const jokeSchema = z.object({
 
 export type Joke = DeepPartial<typeof jokeSchema>;
 
-export const streamTextAction = async () => {
+export const streamObjectAction = async () => {
   const stream = createStreamableValue<Joke>();
 
   (async () => {
-    const { partialObjectStream } = await streamObject({
+    const result = await streamObject({
       model: openai.chat("gpt-3.5-turbo"),
       temperature: 0.5,
       prompt: "Tell me a joke.",
       schema: jokeSchema,
     });
 
-    for await (const partialObject of partialObjectStream) {
+    for await (const partialObject of result.partialObjectStream) {
       stream.update(partialObject);
     }
 

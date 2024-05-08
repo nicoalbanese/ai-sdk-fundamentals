@@ -1,7 +1,7 @@
 "use server";
 
 import { experimental_generateText as generateText } from "ai";
-import { openai } from "ai/openai";
+import { openai } from "@ai-sdk/openai";
 
 export const generateTextAction = async () => {
   const { text } = await generateText({

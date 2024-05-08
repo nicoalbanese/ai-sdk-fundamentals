@@ -1,7 +1,7 @@
 "use server";
 
 import { experimental_streamObject as streamObject } from "ai";
-import { openai } from "ai/openai";
+import { openai } from "@ai-sdk/openai";
 import {
   StreamableValue,
   createAI,
@@ -9,7 +9,7 @@ import {
   createStreamableValue,
 } from "ai/rsc";
 import { JokeComponent } from "./joke-component";
-import { jokeSchema } from "../generate-object/Joke";
+import { jokeSchema } from "./joke";
 
 export async function streamUIAction() {
   "use server";
