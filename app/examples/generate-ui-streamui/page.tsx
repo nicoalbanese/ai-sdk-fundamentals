@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { ClientMessage } from './action';
-import { useActions, useUIState } from 'ai/rsc';
-import { nanoid } from 'nanoid';
+import { useState } from "react";
+import { ClientMessage } from "./action";
+import { useActions, useUIState } from "ai/rsc";
+import { nanoid } from "nanoid";
 
 export default function Home() {
-  const [input, setInput] = useState<string>('');
+  const [input, setInput] = useState<string>("");
   const [conversation, setConversation] = useUIState();
   const { continueConversation } = useActions();
 
@@ -20,34 +20,31 @@ export default function Home() {
         ))}
       </div>
 
-      <form onSubmit={async (e) => {
-        e.preventDefault();
-        setInput("")
-        setConversation((currentConversation: ClientMessage[]) => [
-          ...currentConversation,
-          { id: nanoid(), role: 'user', display: input },
-        ]);
+      <form
+        onSubmit={async (e) => {
+          e.preventDefault();
+          setInput("");
+          setConversation((currentConversation: ClientMessage[]) => [
+            ...currentConversation,
+            { id: nanoid(), role: "user", display: input },
+          ]);
 
-        const message = await continueConversation(input);
+          const message = await continueConversation(input);
 
-        setConversation((currentConversation: ClientMessage[]) => [
-          ...currentConversation,
-          message,
-        ]);
-      }}>
+          setConversation((currentConversation: ClientMessage[]) => [
+            ...currentConversation,
+            message,
+          ]);
+        }}
+      >
         <input
           type="text"
           value={input}
-          onChange={event => {
+          onChange={(event) => {
             setInput(event.target.value);
           }}
         />
-        <button
-          onClick={async () => {
-          }}
-        >
-          Send Message
-        </button>
+        <button>Send Message</button>
       </form>
     </div>
   );

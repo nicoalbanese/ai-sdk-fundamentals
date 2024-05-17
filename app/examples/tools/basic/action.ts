@@ -8,7 +8,7 @@ import { z } from "zod";
 export const generateTextAction = async (location: string) => {
   "use server";
   const { toolResults, toolCalls } = await generateText({
-    model: openai("gpt-3.5-turbo"),
+    model: openai("gpt-4o"),
     temperature: 0.8,
     prompt: `You are a funny chatbot. users location: ${location}`,
     tools: {
@@ -26,7 +26,7 @@ export const generateTextAction = async (location: string) => {
   });
   if (toolResults && toolCalls) {
     const joke = await streamText({
-      model: openai("gpt-3.5-turbo"),
+      model: openai("gpt-4o"),
       prompt: `Tell me a joke that incorporates ${location} and it's current temperature (${toolResults[0].result.temperature})`,
     });
     return createStreamableValue(joke.textStream).value;
